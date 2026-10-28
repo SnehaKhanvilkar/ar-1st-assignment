@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AnatoAR – AR Scanner</title><link rel="stylesheet" href="style.css"><script src="vendor/aframe-1.5.0.min.js"></script><script src="vendor/mindar-image-aframe-1.2.5.prod.js"></script></head><body>
+<div id="stage"></div>
+<div class="scan" id="scan" hidden><div></div><p>Point your camera at the printed AnatoAR heart marker</p></div>
+<div class="hud" id="hud" hidden><span class="status" id="status" role="status">Starting…</span><button class="btn red small" id="exit">Exit AR</button></div>
+<div id="ui"></div>
+<div class="intro" id="intro"><div class="box"><a class="logo" href="index.html"><b>♥</b> Anato<span>AR</span></a>
+ <h2 style="margin-top:12px">AR scanner</h2>
+ <p class="note">Print <a href="assets/heart-marker.jpg" target="_blank" rel="noopener">the heart marker</a> first. When you press <b>Start AR</b>, your browser will ask to use the camera. It is only used to find the marker. Nothing is saved or uploaded.</p>
+ <div id="loader" hidden><div class="spin"></div><p class="note" id="loadText" style="text-align:center">Loading…</p></div>
+ <div class="warn" id="err" hidden><span id="errText"></span></div>
+ <div class="row"><button class="btn red" id="start">Start AR</button><a class="btn ghost" href="index.html#explore">3D demo (no camera)</a></div>
+ <p class="note"><a href="index.html#help">Help &amp; printing tips</a></p></div></div>
+
+<script src="js/anatomy-data.js"></script><script src="script.js"></script><script src="js/ar-controller.js"></script></body></html>

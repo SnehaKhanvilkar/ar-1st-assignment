@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="AnatoAR: explore the human heart in 3D and augmented reality."><title>AnatoAR – Explore Anatomy Beyond the Textbook</title><link rel="stylesheet" href="style.css"><script src="vendor/aframe-1.5.0.min.js"></script></head><body>
+<header class="top"><a class="logo" href="#home"><b>♥</b> Anato<span>AR</span></a>
+<nav aria-label="Main"><a data-v="home" href="#home">Home</a><a data-v="explore" href="#explore">3D Demo</a><a href="ar.html">AR Scanner</a><a data-v="help" href="#help">Help</a></nav></header>
+<main>
+<section id="home" class="view on">
+ <div class="hero"><div><h1>Explore Anatomy Beyond the Textbook.</h1>
+  <p>Point your phone at a printed heart diagram and watch a 3D heart appear. Turn it, tap each structure and learn what it does.</p>
+  <div class="row"><a class="btn red" href="#explore">Explore the Human Heart</a><a class="btn ghost" href="#how">How It Works</a></div>
+  <p class="note">Educational use only. Not a medical tool and not a substitute for professional training or validated anatomical references.</p></div>
+  <div class="hero-art"><img src="assets/images/heart-illustration.png" alt="Illustration of the human heart" width="360"></div></div>
+ <h2 id="how">How it works</h2>
+ <div class="steps"><div class="step"><b>1</b><h3>Scan</h3><p class="note">Open the AR scanner and point your camera at the printed AnatoAR heart marker.</p></div>
+  <div class="step"><b>2</b><h3>Explore</h3><p class="note">A 3D heart appears on the marker. Drag to rotate it a full 360° and pinch to zoom.</p></div>
+  <div class="step"><b>3</b><h3>Learn</h3><p class="note">Tap any structure to read its location and function, then mark it as learned.</p></div></div>
+ <div class="row"><a class="btn" href="ar.html">Open AR Scanner</a><a class="btn ghost" href="#help">Print the marker</a></div>
+</section>
+<section id="explore" class="view">
+ <h1>Explore the Human Heart</h1><p class="note">This is the standard 3D demo: no camera needed. For real AR, print the marker and open the AR scanner.</p>
+ <div class="row" style="margin-top:0"><a class="btn red" href="ar.html">Start AR scanner</a><a class="btn ghost" href="#help">Help &amp; marker</a></div>
+ <div class="viewer" id="demoViewer"><div id="demoStage"></div><div class="msg" id="demoMsg">Loading 3D heart…</div><div id="ui"></div></div>
+ <p class="note">Drag to rotate, pinch or use +/− to zoom, tap a red hotspot or a part of the heart. This is a simplified, original model and is not anatomically exact.</p>
+</section>
+<section id="help" class="view help">
+ <h1>Help &amp; marker</h1>
+ <div class="grid2"><div class="box"><h3>1. Print the marker</h3><img src="assets/heart-marker.jpg" alt="The AnatoAR tracking marker" width="320">
+  <p><a href="assets/heart-marker.jpg" download>Download heart-marker.jpg</a> and print it on plain paper, about A5 or larger. This exact image is the one the tracker was built from. Don't crop or edit it.</p></div>
+ <div class="box"><h3>2. Scan it</h3><ol><li>Open the AR scanner and press <b>Start AR</b>.</li><li>Allow the camera when your browser asks.</li><li>Hold the phone 20 to 40 cm from the paper so the whole marker is in view.</li></ol>
+  <p class="note">The camera is used only to find the marker. Nothing is recorded or uploaded.</p></div>
+ <div class="box"><h3>If tracking fails</h3><ul><li>Use bright, even light and avoid glare on the paper.</li><li>Keep the paper flat and the whole marker visible.</li><li>Move slowly and try a slightly different distance.</li><li>Print larger or on matt paper if a screen shows reflections.</li></ul></div>
+ <div class="box"><h3>No camera or no marker?</h3><p>Use the <a href="#explore">3D demo</a>. It shows the same heart, hotspots and information cards without a camera.</p>
+  <h3>Why camera permission?</h3><p>AR needs a live camera view to recognise the marker. The page works on localhost or HTTPS only.</p></div></div>
+</section>
+</main>
+<footer>AnatoAR · educational prototype · see CREDITS.md for licences</footer>
+<script src="js/anatomy-data.js"></script><script src="script.js"></script></body></html>
